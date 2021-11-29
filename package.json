@@ -1,0 +1,15 @@
+{
+  "name": "fs-software-engineer-challenge",
+  "version": "1.0.4",
+  "description": "Coding challenge for Company.com LLC",
+  "main": "index.ts",
+  "repository": "https://github.com/CompanyDotCom/fs-software-engineer-challenge.git",
+  "author": "ctbw <ctbwilhite@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {},
+  "dependencies": {
+    "lowdb": "^3.0.0"
+  }
+}

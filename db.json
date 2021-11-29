@@ -1,0 +1,155 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "name": "Apple",
+      "description": "Honey crisp juicy, delicious apples",
+      "price": 0.99,
+      "image": {
+        "caption": "apple",
+        "url": "https://bit.ly/3DzQGdH"
+      }
+    },
+    {
+      "id": 1,
+      "name": "Orange",
+      "price": 0.79,
+      "description": "Sweet and citrusy Florida Oranges",
+      "image": {
+        "caption": "orange",
+        "url": "https://bit.ly/3CDX3eO"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Bananas",
+      "price": 1.99,
+      "description": "High in potassium",
+      "image": {
+        "caption": "bananas",
+        "url": "https://bit.ly/3x4qrK0"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Grapes",
+      "price": 1.49,
+      "description": "Goes great with cheese and crackers",
+      "image": {
+        "caption": "grapes",
+        "url": "https://bit.ly/3nwe0DK"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Lettuce",
+      "price": 0.45,
+      "description": "Lettuce is an annual plant of the daisy family, Asteraceae. It is most often grown as a leaf vegetable, but sometimes for its stem and seeds. Lettuce is most often used for salads, although it is also seen in other kinds of food, such as soups, sandwiches and wraps; it can also be grilled.",
+      "image": {
+        "caption": "lettuce",
+        "url": "https://bit.ly/30LJcX0"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Almond Milk",
+      "price": 2.99,
+      "description": "Almond milk is a plant milk with a creamy texture and nutty flavor manufactured from almonds, although some types or brands are flavored in imitation of cow's milk. It does not contain cholesterol or lactose and is low in saturated fat.",
+      "image": {
+        "caption": "almond milk",
+        "url": "https://bit.ly/3CxAgS0"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Celery",
+      "price": 0.45,
+      "description": "slap some peanut butter on these crunchy sticks",
+      "image": {
+        "caption": "celery",
+        "url": "https://bit.ly/3FoL72q"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Peanut Butter -- Creamy, Natural, Low Sodium, PeanutLand Farms, Peanuts for days, We have too many peanuts - please buy them from us.",
+      "price": 1.99,
+      "description": "this is a test peanut butter",
+      "image": {
+        "caption": "peanut butter",
+        "url": "https://bit.ly/3nwbzB8"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Orange Juice",
+      "price": 0.99,
+      "description": "best thing to have with your pancakes",
+      "image": {
+        "caption": "orange juice",
+        "url": "https://bit.ly/3oNTAoW"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Rice",
+      "price": 0.99,
+      "description": "don't try to eat this raw",
+      "image": {
+        "caption": "rice",
+        "url": "https://bit.ly/3FwQFI7"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Oats",
+      "price": 1.99,
+      "description": "this picture makes oats look way too good",
+      "image": {
+        "caption": "oats",
+        "url": "https://bit.ly/3CBVe21"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Crackers",
+      "price": 0.99,
+      "description": "never really good on their own",
+      "image": {
+        "caption": "crackers",
+        "url": "https://bit.ly/3qTtfIN"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Rice Cakes",
+      "price": 0.89,
+      "description": "peanut butter not included",
+      "image": {
+        "caption": "rice cakes",
+        "url": "https://bit.ly/3CAICZ4"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Bread",
+      "price": 3.99,
+      "description": "watch out for mold",
+      "image": {
+        "caption": "bread",
+        "url": "https://bit.ly/3HHzTYW"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Ice Cream",
+      "price": 4.45,
+      "description": "the superior ice cream",
+      "image": {
+        "caption": "ice cream",
+        "url": "https://bit.ly/3DMhLdG"
+      }
+    }
+  ],
+  "cart": {}
+}
