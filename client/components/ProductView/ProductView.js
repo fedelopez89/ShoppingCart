@@ -20,10 +20,8 @@ const ProductView = ({ products }) => {
                   alt={product.image.caption}
                 ></S.imgURL>
               </S.ContainerImg>
-              <S.ProductData>
-                <S.ProductName>{product.name}</S.ProductName>
-                <S.ProductPrice>${product.price}</S.ProductPrice>
-              </S.ProductData>
+              <S.ProductName>{product.name}</S.ProductName>
+              <S.ProductPrice>${product.price}</S.ProductPrice>
               <S.ContainerCenter>
                 <Button type="submit" onClick={() => onAddProduct(product)}>
                   Add

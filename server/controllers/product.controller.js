@@ -15,7 +15,6 @@ export async function controllerGetProducts(req, res) {
 }
 
 export async function controllerGetNameSearched(req, res) {
-  console.log("controllerGetNameSearched");
   try {
     const { name } = req.params;
     const productName = await getNameSearched(name);

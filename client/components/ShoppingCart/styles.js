@@ -20,3 +20,8 @@ export const ContainerShopping = styled.div`
   border-radius: 10px;
   text-align: right;  
 `;
+
+export const CartContainer = styled.div`
+  cursor: pointer;
+`;
+

@@ -13,11 +13,12 @@ export const ProductView = styled.div`
   background: white;
   border-radius: 0.5rem;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
-  height: 15rem;
+  height: 17rem;
   margin-right: 1.5rem;
   margin-bottom: 2rem;
-  padding: 1.5rem 1rem 0.5rem 1rem;
+  padding: 0rem 0rem 0.5rem 1rem;
   width: 13rem;
+  align-items: stretch;
 `;
 
 export const ProductName = styled.p`
@@ -27,6 +28,7 @@ export const ProductName = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: center;
 `;
 
 export const ProductPrice = styled.p`
@@ -35,6 +37,8 @@ export const ProductPrice = styled.p`
   white-space: nowrap;
   color: grey;
   font-weight: 500;
+  margin: 1rem 0;
+  text-align: center;
 `;
 
 export const imgURL = styled.img`
@@ -44,12 +48,6 @@ export const imgURL = styled.img`
   &:hover {
     transform: scale(1.375);
   }
-`;
-
-export const ProductData = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin: 1rem;
 `;
 
 export const ContainerCenter = styled.div`

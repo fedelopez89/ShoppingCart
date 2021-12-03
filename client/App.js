@@ -3,6 +3,8 @@ import Header from "./components/Header/Header";
 import ListProducts from "./components/ListProducts/ListProducts";
 import SearchProduct from "./components/SearchProduct/SearchProduct";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
+import CartProvider from "./contexts/cart";
+
 // Styles
 import * as S from "./styles";
 
@@ -13,14 +15,18 @@ function App() {
     setProductSearched(enteredText);
   };
 
+  const image = {
+    link: "https://assets-dev.company-corp.com/dashboard_nextgen/company/images/logo.svg",
+    reference: "Icon-Company.com",
+  };
+
   return (
     <S.DivApp>
-      <Header title={"Company.Com Challenge"} />
-      <ShoppingCart />
-      <S.SearchNav>
+      <CartProvider>
+        <Header title={"Fullstack Software Challenge"} image={image} />
         <SearchProduct onSearchProduct={searchProduct} />
-      </S.SearchNav>
-      <ListProducts productSearched={productSearched}></ListProducts>
+        <ListProducts productSearched={productSearched}></ListProducts>
+      </CartProvider>
     </S.DivApp>
   );
 }

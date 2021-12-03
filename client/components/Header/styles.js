@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-export const TitleH1 = styled.h1`
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  text-align: center;
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  max-width: 90%;
+  margin: auto;
 `;
