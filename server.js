@@ -1,15 +1,38 @@
 'use strict'
 
-const express = require('express');
-const path = require('path');
+import express from 'express';
+import cors from 'cors';
 
 // Webpack
-const webpack = require('webpack');
-const webpackDev = require('webpack-dev-middleware');
-const config = require('./webpack.config');
+import webpack from 'webpack';
+import webpackDev from 'webpack-dev-middleware';
+import {config} from './webpack.config.babel.js';
+import appRoute from './server/routes/index.js';
 
 // Initializing packages
 const app = express();
+
+// Static files
+app.use(express.static('./public'));
+
+// Cors setting
+app.use(cors());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Allow-Headers', '*');
+  res.header('Access-Control-Allow-Methods', '*');
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Remove express header
+app.use((req, res, next) => {
+  res.removeHeader('X-Powered-By');
+  next();
+});
 
 // Settings
 app.set('port', process.env.PORT || 3000);
@@ -17,20 +40,8 @@ app.set('port', process.env.PORT || 3000);
 // Middlwares
 app.use(webpackDev(webpack(config)));
 
-// Static files
-app.use(express.static(path.join(__dirname, 'public')));
-console.log("dirname", __dirname);
-
-// dirname = /Users/fede/Documents/fs-software-engineer-challenge/public ==> index.html
-
-// routes
-/* app.get('/', (req, res) => {
-  res.send('Hello World');
-});
-app.get('/api', (req, res) => {
-  res.json({ api: 'works!' });
-});
- */
+// Routes
+app.use('/api/v1', appRoute);
 
 console.log('Starting Server...');
 
