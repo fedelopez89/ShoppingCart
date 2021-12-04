@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { getProducts } from "../../helpers/getProducts";
 import { getNameSearched } from "../../helpers/getNameSearched";
-import ProductView from "../ProductView/ProductView";
+import ProductCard from "../ProductCard/ProductCard";
 // Styles
 import * as S from "./styles";
 
-const ListProducts = ({productSearched}) => {
+const ListProducts = ({ productSearched }) => {
   const [listProduct, setListProduct] = useState([]);
 
   useEffect(() => {
-    if (productSearched.length>0) {
+    if (productSearched.length > 0) {
       getNameSearched(productSearched).then((products) => {
         setListProduct(products);
       });
     } else {
-      console.log("ListProducts - producto a buscar: ", productSearched);
       getProducts().then((products) => {
         setListProduct(products);
       });
@@ -25,12 +24,13 @@ const ListProducts = ({productSearched}) => {
 
   if (listProduct !== undefined) {
     if (listProduct.length > 0) {
-      console.log(listProduct);
-      content = <ProductView products={listProduct} />;
+      content = listProduct.map((product) => {
+        return <ProductCard key={product.id} product={product} />;
+      });
     }
   }
 
-  return <S.ListViewStyle>{content}</S.ListViewStyle>;
+  return <S.ProductList>{content}</S.ProductList>;
 };
 
 export default ListProducts;

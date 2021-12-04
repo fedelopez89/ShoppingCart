@@ -32,7 +32,18 @@ export const FormSearch = styled.form`
   }
 `;
 
-export const CartContainer = styled.div`
+export const ShoppingCart = styled.div`
   padding-top: 0.65rem;
   cursor: pointer;
+`;
+
+export const QuantityItems = styled.span`
+  border-radius: 50%;
+  padding: 0rem 0.25rem;
+  border: 2.5px solid red;
+  top: -1.75rem;
+  position: relative;
+  right: -2.5rem;
+  font-size: 1rem;
+  color: red;
 `;

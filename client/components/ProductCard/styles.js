@@ -1,15 +1,6 @@
 import styled from "styled-components";
 
-export const ProductList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  padding-left: 0;
-`;
-
-export const ProductView = styled.div`
+export const ProductCard = styled.div`
   background: white;
   border-radius: 0.5rem;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);

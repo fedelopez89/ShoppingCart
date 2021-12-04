@@ -25,23 +25,19 @@ export async function controllerGetNameSearched(req, res) {
 }
 
 export async function controllerPostCart(req, res) {
-  console.log("controllerPostCart");
   try {
-    const { id } = req.params;
-    const productName = await postCart(id);
-    console.log(id);
-
-    return res.status(200).send(kid);
+    const data = req.body;
+    const productName = await postCart(data);
+    return res.status(200).send(productName);
   } catch (error) {
     return res.status(500).send(`Error: ${error.message}`);
   }
 }
 
 export async function controllerGetCart(req, res) {
-  console.log("controllerPostCart");
   try {
-    const productName = await getCart();
-    return res.status(200).send(productName);
+    const products = await getCart();
+    return res.status(200).send(products);
   } catch (error) {
     return res.status(500).send(`Error: ${error.message}`);
   }

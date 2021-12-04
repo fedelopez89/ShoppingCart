@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import ListProducts from "./components/ListProducts/ListProducts";
 import SearchProduct from "./components/SearchProduct/SearchProduct";
-import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
-import CartProvider from "./contexts/cart";
+import CartProvider from "./contexts/CartProvider/CartProvider";
 
 // Styles
 import * as S from "./styles";

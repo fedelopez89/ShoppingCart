@@ -1,5 +1,5 @@
-import React, { useReducer, createContext, useEffect, Fragment } from "react";
-import useLocalStorage from "../hooks/useLocalStorage";
+import React, { useReducer, createContext, useEffect } from "react";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const initialState = {
   isCartOpen: false,
@@ -98,16 +98,14 @@ const CartProvider = ({ children }) => {
   
   useEffect(() => {
     setPersistedCartItems(state.items);
-  }, [state.items]);
+  }, [JSON.stringify(state.items)]);
 
   return (
-    <Fragment>
     <CartDispatchContext.Provider value={dispatch}>
       <CartStateContext.Provider value={state}>
         {children}
       </CartStateContext.Provider>
     </CartDispatchContext.Provider>
-    </Fragment>
   );
 };
 

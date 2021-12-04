@@ -18,25 +18,16 @@ export async function getNameSearched(nameSearched) {
 }
 
 export async function getCart(nameSearched) {
-  console.log("getCart");
   const db = new Low(new JSONFile("./db.json"));
   await db.read();
   const { cart } = db.data;
   return cart;
 }
 
-export async function postCart(productAdded) {
-  const { id, name, description, price, quantity } = productAdded;
-  console.log("postCart");
+export async function postCart(productWithQuantity) {
   const db = new Low(new JSONFile("./db.json"));
   await db.read();
   const { cart } = db.data;
-  cart.push({
-    id,
-    name,
-    description,
-    price,
-    quantity,
-  });
+  cart.push(productWithQuantity);
   return await db.write();
 }
