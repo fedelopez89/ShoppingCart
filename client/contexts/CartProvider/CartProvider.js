@@ -3,7 +3,7 @@ import useLocalStorage from "../../hooks/useLocalStorage";
 
 const initialState = {
   isCartOpen: false,
-  items: []
+  items: [],
 };
 
 export const CartStateContext = createContext();
@@ -14,7 +14,7 @@ const reducer = (state, action) => {
     case "TOGGLE_CART_POPUP":
       return {
         ...state,
-        isCartOpen: !state.isCartOpen
+        isCartOpen: !state.isCartOpen,
       };
     case "ADD_TO_CART":
       const id = action.payload.cartItem.id;
@@ -25,7 +25,7 @@ const reducer = (state, action) => {
           if (item.id === id) {
             return {
               ...item,
-              quantity: item.quantity + 1
+              quantity: item.quantity + 1,
             };
           }
           return item;
@@ -36,19 +36,14 @@ const reducer = (state, action) => {
       }
       return {
         ...state,
-        items: cartItems
+        items: cartItems,
       };
     case "REMOVE_FROM_CART":
       return {
         ...state,
         items: state.items.filter(
           (item) => item.id !== action.payload.cartItemId
-        )
-      };
-    case "CLEAR_CART":
-      return {
-        ...state,
-        ...initialState
+        ),
       };
     default:
       throw new Error(`Unknown action: ${action.type}`);
@@ -57,7 +52,7 @@ const reducer = (state, action) => {
 
 export const toggleCartPopup = (dispatch) => {
   return dispatch({
-    type: "TOGGLE_CART_POPUP"
+    type: "TOGGLE_CART_POPUP",
   });
 };
 
@@ -65,8 +60,8 @@ export const addToCart = (dispatch, cartItem) => {
   return dispatch({
     type: "ADD_TO_CART",
     payload: {
-      cartItem: cartItem
-    }
+      cartItem: cartItem,
+    },
   });
 };
 
@@ -74,14 +69,8 @@ export const removeFromCart = (dispatch, cartItemId) => {
   return dispatch({
     type: "REMOVE_FROM_CART",
     payload: {
-      cartItemId: cartItemId
-    }
-  });
-};
-
-export const clearCart = (dispatch) => {
-  return dispatch({
-    type: "CLEAR_CART"
+      cartItemId: cartItemId,
+    },
   });
 };
 
@@ -92,10 +81,10 @@ const CartProvider = ({ children }) => {
   );
   const persistedCartState = {
     isCartOpen: false,
-    items: persistedCartItems || []
+    items: persistedCartItems || [],
   };
   const [state, dispatch] = useReducer(reducer, persistedCartState);
-  
+
   useEffect(() => {
     setPersistedCartItems(state.items);
   }, [JSON.stringify(state.items)]);

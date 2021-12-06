@@ -15,10 +15,7 @@ const ProductCard = ({ product }) => {
   const onAddProduct = () => {
     const productWithQuantity = { ...product, quantity: 1 };
     addToCart(dispatch, productWithQuantity);
-    postProductCart(productWithQuantity).then(() => {
-      console.log("postProductCart OK ", productWithQuantity);
-    });
-    // FGL
+    postProductCart(productWithQuantity);
     setIsAdded(true);
     setTimeout(() => {
       setIsAdded(false);
